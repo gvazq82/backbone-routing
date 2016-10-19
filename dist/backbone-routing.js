@@ -22,7 +22,7 @@
     enter: function enter() {
       var _this = this;
 
-      var args = arguments[0] === undefined ? [] : arguments[0];
+      var args = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
 
       this._isEntering = true;
       this.trigger.apply(this, ['before:enter before:fetch', this].concat(args));
